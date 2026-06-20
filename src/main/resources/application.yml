@@ -1,0 +1,20 @@
+server:
+  port: ${SERVER_PORT:8091}
+
+spring:
+  application:
+    name: ms-ventas
+  datasource:
+    url: ${DB_VENTAS_URL:jdbc:postgresql://pg-26c06432-cesarmaldonadomecanicodae13-b1f5.a.aivencloud.com:20436/defaultdb?sslmode=require}
+    username: ${DATABASE_USERNAME:avnadmin}
+    password: ${DATABASE_PASSWORD:AVNS_pYbx3ZFApq7AA_T_Qyh}
+    hikari:
+      maximum-pool-size: 3
+      minimum-idle: 1
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
